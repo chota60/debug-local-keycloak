@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  keycloak:
+    build: 
+      context: .
+    privileged: true
+    volumes:
+      - ./data/scripts/debug.sh:/opt/keycloak/bin/debug.sh
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - PROXY_ADDRESS_FORWARDING=true
+    ports:
+      - 8080:8080
+      - 5005:5005
+    entrypoint: "/opt/keycloak/bin/debug.sh start-dev --debug"
