@@ -1,5 +1,5 @@
 #!/bin/sh
-# this file is copy and extend from 
+# this file is copy and extend from  https://github.com/keycloak/keycloak/blob/main/quarkus/dist/src/main/content/bin/kc.sh
 
 case "$(uname)" in
     CYGWIN*)
