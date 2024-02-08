@@ -7,6 +7,7 @@ services:
     privileged: true
     volumes:
       - ./data/scripts/debug.sh:/opt/keycloak/bin/debug.sh
+      # - ./data/providers/keycloak-discord-0.5.0.jar:/opt/keycloak/providers/keycloak-discord-0.5.0.jar # SPI を追加する場合こんなイメージで追加する
     environment:
       - KEYCLOAK_ADMIN=admin
       - KEYCLOAK_ADMIN_PASSWORD=admin
